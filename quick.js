@@ -21,7 +21,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function isBlocked(page) {
   const text = await page.evaluate(() => document.body.innerText.slice(0, 500));
   return text.includes('验证') || text.includes('网络环境存在异常') ||
-         text.includes('登录知乎');
+         text.includes('登录知乎') || text.includes('请登录后查看');
 }
 
 (async () => {

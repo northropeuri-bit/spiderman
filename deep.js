@@ -19,7 +19,8 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function isBlocked(page) {
   const t = await page.evaluate(() => document.body.innerText.slice(0, 500));
-  return t.includes('验证') || t.includes('网络环境存在异常');
+  return t.includes('验证') || t.includes('网络环境存在异常') ||
+         t.includes('登录知乎') || t.includes('请登录后查看');
 }
 
 (async () => {
