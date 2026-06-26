@@ -3,3 +3,4 @@ browser_state.json
 zhihu_cookies.json
 *.pyc
 __pycache__/
+output/
