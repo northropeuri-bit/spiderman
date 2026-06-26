@@ -4,3 +4,4 @@ zhihu_cookies.json
 *.pyc
 __pycache__/
 output/
+tgb_cookies.json
